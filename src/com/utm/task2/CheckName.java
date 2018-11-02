@@ -4,17 +4,10 @@ public  class  CheckName {
 
 
     public static boolean checkAny(String in, String chk) {
-        //------------------------cauta o segventa consecutiva oriunde in cuvint
-                                                        //    geoffrey chaucer
-                                                        //    *   frey*
-
-                            System.out.println("Procedura checkAny este in proces "+in+"  "+chk);
 
         int p1 = 0,p2=0;
-        for (int i = 0; i <( in.length()-(chk.length()-2)); i++) {
-//if(chk.charAt(p1)=='.'){ p1++; continue;}
+        for (int i = 0; i <( in.length()); i++) {
             if (in.charAt(i) == chk.charAt(p1)) {
-//                System.out.println(in.charAt(i)+" == "+chk.charAt(p1));
                 p1++;
                 continue;
             } else {
@@ -47,7 +40,6 @@ public  class  CheckName {
         int p1 = 0;
             for (int i = 0; i < chk.length(); i++) {
 
-              //  if (chk.length() == p1){ return true; }
                 if (chk.charAt(p1) == '.') {  // .vfn.knn.
                     p1++;
                     if (chk.length() == p1){ return true; }

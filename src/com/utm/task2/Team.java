@@ -74,21 +74,24 @@ public class Team {
 
 
 
-//        System.out.println();
-//      k= CheckName.checkAny("geoffrey chaucer",demoName.toLowerCase());
+        System.out.println();
 
 
         for (int i = 0; i < this.i; i++) {
             if (d == 0)
                 if(CheckName.checkAny(players[i].getName().toLowerCase(),demoName.toLowerCase()))
-                {System.out.println(players[i].getName()+" : from : "+name); k=true; }
+                {
+                    System.out.println(players[i].getName()+" : from : "+name);
+                k=true; }
 
             if (s == 0)
                 if(CheckName.checkDot(players[i].getName().toLowerCase(),demoName.toLowerCase()))
-                {System.out.println(players[i].getName()+" : from : "+name); k=true;}
+                {
+                    System.out.println(players[i].getName()+" : from : "+name);
+                k=true;}
         }
         if(!k)
-System.out.println("Nu sa gasit nimic : "+name);
+System.out.println("Nimic de la : "+name);
         return false;
     }
 
