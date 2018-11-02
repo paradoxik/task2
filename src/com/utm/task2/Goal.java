@@ -21,7 +21,7 @@ public class Goal {
         for (int g = 0; g < pnames.length; g++) {
             teams[i].
 
-                    add_Player(pnames[g]);
+                    addPlayer(pnames[g]);
         }
 
         i++;
@@ -47,5 +47,12 @@ public class Goal {
 
     }
 
+public boolean findNameFromTeem(String demoName){
+
+        boolean b1=false,b2;
+        b1= teams[0].findPlayer(demoName);
+        b2=teams[1].findPlayer(demoName);
+        return b1&&b2;
+}
 
 }

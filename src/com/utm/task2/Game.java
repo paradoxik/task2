@@ -24,6 +24,10 @@ public void ShowGame(){
         goal.ShowGoals();
 }
 
+public void findPlayer(String demoName){
+
+        goal.findNameFromTeem(demoName);
+}
 
 
 }

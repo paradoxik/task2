@@ -35,6 +35,8 @@ public  void instantiaza(){
 
     game.showTeams();
     game.ShowGame();
+String demoName ="*frey*";
+game.findPlayer(demoName);
 }
 
 
