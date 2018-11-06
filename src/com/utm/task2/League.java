@@ -1,37 +1,40 @@
 package com.utm.task2;
 
+import java.util.ArrayList;
+
 public class League {
 private Game game =new Game();
-private String[] tname=new String[2];
-private String[] team_1_Players=new String[3];
-private String[] team_2_Players=new String[3];
-private double[] time=new double[3];
+private ArrayList<String> tname=new ArrayList<>();
+private ArrayList<String> team_1_Players=new ArrayList<>();
+private ArrayList<String> team_2_Players=new ArrayList<>();
+private ArrayList<Double> time=new ArrayList<>();
 
 
 League(){
-    this.tname[0]="Reds";
-    this.tname[1]="Greens";
-    this.team_1_Players[0]="Robert Service";
-    this.team_1_Players[1]="Robbie Burns";
-    this.team_1_Players[2]="Rafael Sabatini";
 
-    this.team_2_Players[0]="George Eliot";
-    this.team_2_Players[1]="Graham Greene";
-    this.team_2_Players[2]="Geoffrey Chaucer";
+    this.tname.add("Reds");
+    this.tname.add("Greens");
+    this.team_1_Players.add("Robert Service");
+    this.team_1_Players.add("Robbie Burns");
+    this.team_1_Players.add("Rafael Sabatini");
 
-    this.time[0]=12.0;
-    this.time[1]=23.0;
-    this.time[2]=55.0;
+    this.team_2_Players.add("George Eliot");
+    this.team_2_Players.add("Graham Greene");
+    this.team_2_Players.add("Geoffrey Chaucer");
+
+    this.time.add(12.0);
+    this.time.add(23.0);
+    this.time.add( 55.0);
 }
 
 public  void instantiaza(){
 
-    game.setTeam(this.tname[0],this.team_1_Players);
-    game.setTeam(this.tname[1],this.team_2_Players);
+    game.setTeam(this.tname.get(0),this.team_1_Players);
+    game.setTeam(this.tname.get(1),this.team_2_Players);
 
-    game.setGoal(1,2,this.time[0]);
-    game.setGoal(1,1,this.time[1]);
-    game.setGoal(0,0,this.time[2]);
+    game.setGoal(1,2,this.time.get(0));
+    game.setGoal(1,1,this.time.get(1));
+    game.setGoal(0,0,this.time.get(2));
 
     game.showTeams();
     game.ShowGame();

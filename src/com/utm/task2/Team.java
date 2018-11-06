@@ -7,7 +7,7 @@ public class Team {
 
     int i = 0;
     private String name;
-    private Player[] players = new Player[3];
+    private ArrayList<Player> players = new ArrayList<>();
 
 
     Team() {
@@ -16,15 +16,15 @@ public class Team {
 
     public void addPlayer(String name) {
 
-        players[i] = new Player();
-        players[i].setname(name);
+        players.add(new Player());
+        players.get(i).setname(name);
 
         i++;
 
     }
 
     public void set_scored(int j) {
-        players[j].setScored();
+        players.get(j).setScored();
     }
 
     public void getPlayerScored() {
@@ -33,13 +33,13 @@ public class Team {
     }
 
     public String getPlayerName(int j) {
-        return players[j].getName();
+        return players.get(j).getName();
     }
 
     public void show_players() {
         System.out.println(name + ":");
         for (int i = 0; i < this.i; i++) {
-            System.out.println(players[i].getName());
+            System.out.println(players.get(i).getName());
         }
     }
 
@@ -79,15 +79,15 @@ public class Team {
 
         for (int i = 0; i < this.i; i++) {
             if (d == 0)
-                if(CheckName.checkAny(players[i].getName().toLowerCase(),demoName.toLowerCase()))
+                if(CheckName.checkAny(players.get(i).getName().toLowerCase(),demoName.toLowerCase()))
                 {
-                    System.out.println(players[i].getName()+" : from : "+name);
+                    System.out.println(players.get(i).getName()+" : from : "+name);
                 k=true; }
 
             if (s == 0)
-                if(CheckName.checkDot(players[i].getName().toLowerCase(),demoName.toLowerCase()))
+                if(CheckName.checkDot(players.get(i).getName().toLowerCase(),demoName.toLowerCase()))
                 {
-                    System.out.println(players[i].getName()+" : from : "+name);
+                    System.out.println(players.get(i).getName()+" : from : "+name);
                 k=true;}
         }
         if(!k)

@@ -1,5 +1,7 @@
 package com.utm.task2;
 
+import java.util.ArrayList;
+
 public class Game {
 
 private Goal goal=new Goal();
@@ -10,7 +12,7 @@ private Goal goal=new Goal();
         goal.setGoal(team,player,time);
     }
 
-    public void setTeam(String tname,String[] pnames){
+    public void setTeam(String tname, ArrayList<String> pnames){
         goal.
                 setTeam(tname,pnames);
 
